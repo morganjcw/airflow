@@ -325,6 +325,9 @@ function setup_provider_packages() {
     if [[ ${VERBOSE:="false"} == "true" ||  ${VERBOSE} == "True" ]]; then
         OPTIONAL_VERBOSE_FLAG+=("--verbose")
     fi
+    if [[ ${ANSWER:=""} != "" ]]; then
+        OPTIONAL_ANSWER_FLAG+=("--answer" "${ANSWER}")
+    fi
     readonly PACKAGE_TYPE
     readonly PACKAGE_PREFIX_UPPERCASE
     readonly PACKAGE_PREFIX_LOWERCASE

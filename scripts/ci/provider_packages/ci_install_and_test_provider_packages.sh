@@ -42,8 +42,4 @@ function run_test_package_import_all_classes() {
         "/opt/airflow/scripts/in_container/run_install_and_test_provider_packages.sh"
 }
 
-build_images::prepare_ci_build
-
-build_images::rebuild_ci_image_if_needed_with_group
-
 run_test_package_import_all_classes
